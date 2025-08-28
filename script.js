@@ -12,11 +12,12 @@ for (const heart of cardHearts) {
         const c = parseInt(a.innerText);
         const d = c + 1;
         a.innerText = d;
-        console.log(b);
-
+        
     })
 
 }
+
+
 
 
 
@@ -27,14 +28,15 @@ const callData = [];
 // id="emergency-call"....id of call button1
 // id="emergency-text....emergency text(for alert)
 // id="emergency-num"....emergency number(for alert)
-// id =   call-history....call history vutton id 
+// id =   call-history....call history section id 
+// history-container ....call history container id(where history adds)
 
 document.getElementById('emergency-call').addEventListener('click', function (e) {
 
-
+    e.preventDefault();
     const text = document.getElementById('emergency-text').innerText;
     const num = document.getElementById('emergency-num').innerText;
-    alert("Calling" + " " + text + " " + num);
+   // alert("Calling" + " " + text + " " + num);
 
 
     let a = document.getElementById('coin-count');
@@ -44,26 +46,27 @@ document.getElementById('emergency-call').addEventListener('click', function (e)
         let d = (c - 20);
         a.innerText = d;
         console.log(b);
+        alert("Calling" + " " + text + " " + num);
     }
 
-    else{
+    else {
         alert('You do not have enough balance');
     }
 
     const data = {
-        name : "National Emergency Number" ,
-        call : "999" ,
-        date : new Date().toLocaleTimeString()
+        name: "National Emergency Number",
+        call: "999",
+        date: new Date().toLocaleTimeString()
     }
     callData.push(data);
 
-    const historyFCrad =document.getElementById('call-history');
+    const historyFCrad = document.getElementById('history-container');
 
-    
-       const div = document.createElement('div')
-       div.innerHTML = `
+    callData.innerText = "";
+    const div = document.createElement('div')
+    div.innerHTML = `
         <div
-                        class="w-[350px] h-[80px] bg-gray-100 rounded-[20px] mt-5 flex justify-between items-center p-5">
+                        id="history-body" class="w-[350px] h-[80px] bg-gray-100 rounded-[20px] mt-5 flex justify-between items-center p-5">
 
                         <!-- history vox content -->
                         <div>
@@ -83,25 +86,25 @@ document.getElementById('emergency-call').addEventListener('click', function (e)
        
        
        `
-       historyFCrad.appendChild(div)
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
+    historyFCrad.appendChild(div)
 
 
 
 })
 
 
+
+
+
+/*clear history functionality*/
+
+// id = clear-history...id of clear vutton
+// id =   call-history....call history section 
+// id="history-body"....call history body
+//history-container ....call history container id(where history adds)
+document.getElementById('clear-history').addEventListener('click', function (e) {
+    e.preventDefault();
+    const historyFCard = document.getElementById('history-container');
+    historyFCard.innerText = "";
+
+})
