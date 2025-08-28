@@ -108,3 +108,24 @@ document.getElementById('clear-history').addEventListener('click', function (e) 
     historyFCard.innerText = "";
 
 })
+
+
+/*copy button functionality(card-1)*/
+
+// id="copy-vtn"....copy vutton id
+// id="copy-count"....copy count vutton id
+// "emergency-num" ....emergency number(999)
+
+document.getElementById('copy-vtn').addEventListener('click', function (e) {
+    e.preventDefault();
+    alert('999 Number copied');
+    let a = document.getElementById('copy-count');
+    let b = a.innerText;
+    let c = parseInt(a.innerText);
+    let d = c + 1;
+    a.innerText = d;
+
+    const num = document.getElementById('emergency-num').innerText;
+    navigator.clipboard.writeText(num);
+})
+
