@@ -11,11 +11,12 @@
 
 </head>
 
+
 <body class="">
     <!-- header(nav-Bar) -->
     <header>
         <!-- main header vox -->
-        <div class="w-[1920px]  h-[100px] flex justify-between items-center">
+        <div class="md:w-[1920px] sm:w-[640px] h-[100px] flex justify-between items-center">
 
             <!--left side main vox -->
             <div class=" w-[195px] h-[50px] my-[25px] flex justify-center gap-[10px] ">
@@ -42,7 +43,7 @@
 
                 <!-- copy count design -->
                 <div class="w-[100px] h-[52px] bg-green-500 rounded-[50px] flex justify-center items-center gap-1">
-                    <h1 class="font-bold text-amber-50"> <span>2</span> Copy</h1>
+                    <h1 class="font-bold text-amber-50"> <span id="copy-count">0</span> Copy</h1>
 
                 </div>
 
@@ -51,10 +52,11 @@
 
         </div>
     </header>
+    
 
     <!-- banner section -->
     <section>
-        <div class="w-[1920px] h-[239px] bg-gradient-to-r from-green-900 via-green-700 to-green-900">
+        <div class="md:w-[1920px] sm:w-[640px] h-[239px] bg-gradient-to-r from-green-900 via-green-700 to-green-900">
 
             <!-- vanner logo vox -->
             <div class="flex justify-center  pt-[40px]">
@@ -79,21 +81,21 @@
 
 
     <!-- main vody 2 part -->
-    <main class="w-[1920px] h-[1300px] bg-green-50 ">
+    <main class="md:w-[1920px] sm:w-[640px] sm:h-[4100px] md:h-[1300px] bg-green-50 ">
 
         <!-- div for cards and history -->
-        <div class="w-[1800px] h-[1140px] ml-[40px] flex">
+        <div class="w-[1800px] h-[1140px] ml-[40px] md:flex">
 
 
             <!-- div for  all cards -->
 
-            <div class="grid grid-cols-3 w-[1370px] gap-5">
+            <div class="grid md:grid-cols-3 sm:grid-cols-1 w-[1370px] gap-5">
 
 
 
 
                 <!-- card 1 main vox -->
-                <div class="w-[436px] h-[375px] bg-white rounded-[20px] p-5 mt-10">
+                <div class="w-[436px] h-[375px] bg-white rounded-[20px] p-5 mt-10 ">
 
 
                     <!-- card 1 image and icon vox -->
@@ -129,8 +131,8 @@
 
 
                             <!-- copy button -->
-                            <button
-                                class="w-[182px] h-[40px] border bord  bg-white rounded-[10px] text-gray-400 font-bold mt-5">
+                            <button id="copy-vtn"
+                                class="w-[182px] h-[40px] border bord  bg-white rounded-[10px] text-gray-400 font-bold mt-5 hover:bg-black">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy
 
@@ -163,7 +165,7 @@
 
 
                 <!-- card 2 main vox -->
-                <div class="w-[436px] h-[375px] bg-white rounded-[20px] p-5 mt-10">
+                <div class="w-[436px] h-[375px] bg-white rounded-[20px] p-5 md:mt-10 sm:mt-0">
 
 
                     <!-- card 1 image and icon vox -->
@@ -588,7 +590,7 @@
 
             <!-- section for Call History -->
             <section>
-                <div id="call-history" class="w-[400px] h-[1140px] bg-white rounded-[20px] ml-10 mt-10 p-5">
+                <div id="call-history" class="md:w-[400px] sm:w-[436px] h-[1140px] bg-white rounded-[20px] md:ml-10 mt-10 p-5">
 
                     <!-- call history text vox and Clear -->
                     <div class="flex justify-between items-center">
@@ -601,11 +603,13 @@
 
                         </div>
 
+                        
+
 
                         <!-- clear (vutton)  -->
-                        <button
-                            class="text-white bg-green-600 rounded-[30px] w-[114px] h-[52px] flex justify-center items-center gap-2 mt-3">
-                            <p class="text-[16px] font-bold">Clear</p>
+                        <button id="clear-history"
+                            class="text-white bg-green-600 hover:bg-gray-500 rounded-[30px] w-[114px] h-[52px] flex justify-center items-center gap-2 mt-3 text-[16px] font-bold">
+                            Clear
                         </button>
 
 
@@ -618,6 +622,9 @@
 
 
                     <!-- history details vox (for js)-->
+                     <div id="history-container">
+                            
+                        </div>
                    
                 </div>
 
@@ -636,7 +643,7 @@
 
     </main>
 
-    <script src="script.js"></script>
+    <script src="design1.js"></script>
 
 
 </body>
