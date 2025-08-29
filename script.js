@@ -1,6 +1,3 @@
-// card-heart // card vutton class
-//  header-heart // header heart id
-
 
 
 /*heart count increase functionality*/
@@ -12,7 +9,7 @@ for (const heart of cardHearts) {
         const c = parseInt(a.innerText);
         const d = c + 1;
         a.innerText = d;
-        
+
     })
 
 }
@@ -22,21 +19,16 @@ for (const heart of cardHearts) {
 
 
 const callData = [];
-/*Call button functionality*/
 
-// id="coin-count"....id of total coins vutton
-// id="emergency-call"....id of call button1
-// id="emergency-text....emergency text(for alert)
-// id="emergency-num"....emergency number(for alert)
-// id =   call-history....call history section id 
-// history-container ....call history container id(where history adds)
 
-document.getElementById('emergency-call').addEventListener('click', function (e) {
 
-    e.preventDefault();
-    const text = document.getElementById('emergency-text').innerText;
-    const num = document.getElementById('emergency-num').innerText;
-   // alert("Calling" + " " + text + " " + num);
+
+/*Reusavle function for call vutton */
+
+function callFeature(content, numver) {
+    const text = document.getElementById(content).innerText;
+    const num = document.getElementById(numver).innerText;
+    // alert("Calling" + " " + text + " " + num);
 
 
     let a = document.getElementById('coin-count');
@@ -51,18 +43,18 @@ document.getElementById('emergency-call').addEventListener('click', function (e)
 
     else {
         alert('You do not have enough balance');
-    }
 
+
+    }
     const data = {
-        name: "National Emergency Number",
-        call: "999",
+        name: text,
+        call: num,
         date: new Date().toLocaleTimeString()
     }
     callData.push(data);
 
     const historyFCrad = document.getElementById('history-container');
 
-    callData.innerText = "";
     const div = document.createElement('div')
     div.innerHTML = `
         <div
@@ -87,10 +79,9 @@ document.getElementById('emergency-call').addEventListener('click', function (e)
        
        `
     historyFCrad.appendChild(div)
+}
 
 
-
-})
 
 
 
@@ -108,6 +99,7 @@ document.getElementById('clear-history').addEventListener('click', function (e) 
     historyFCard.innerText = "";
 
 })
+
 
 
 /*copy button functionality(card-1)*/
