@@ -222,6 +222,21 @@ document.getElementById('copy-vtn').addEventListener('click', function (e) {
     navigator.clipboard.writeText(num);
 })
 
+
 /*copy vuttton reusavle function */
+function copyFeature (id){
+
+    let a = document.getElementById('copy-count');
+    let b = a.innerText;
+    let c = parseInt(a.innerText);
+    let d = c + 1;
+    a.innerText = d;
+
+    const num = document.getElementById(id).innerText;
+    alert( num + " " + 'Number copied');
+    navigator.clipboard.writeText(num);
 
 
+
+
+}
