@@ -240,3 +240,62 @@ function copyFeature (id){
 
 
 }
+
+/*copy button functionality(card-1)*/
+
+// id="emergency-copy"....copy vutton id
+// id="copy-count"....copy count vutton id
+// "emergency-num" ....emergency number(999)
+
+document.getElementById('emergency-copy').addEventListener('click', function (e) {
+    e.preventDefault();
+   copyFeature ( 'emergency-num' );
+})
+
+
+/*copy button functionality(card-2)*/
+// id="police-copy"....copy vutton id
+//police-num....police number id
+document.getElementById('police-copy').addEventListener('click', function (e) {
+    e.preventDefault();
+   copyFeature ( 'police-num' );
+})
+
+
+//copy button functionality(card-3)*/
+// id="fire-copy"....copy vutton id
+//fire-num....fire number id
+document.getElementById('fire-copy').addEventListener('click', function (e) {
+    e.preventDefault();
+   copyFeature ( 'fire-num' );
+})
+
+/*copy button functionality(card-4)*/
+// id="ambulance-copy"....copy vutton id
+//ambulance-num....ambulance number id
+document.getElementById('ambulance-copy').addEventListener('click', function (e) {
+    e.preventDefault();
+   copyFeature ( 'ambulance-num' );
+})
+
+/*copy button functionality(card-5)*/
+//id = women-copy....women copy vutton id
+document.getElementById('women-copy').addEventListener('click', function (e) {
+    e.preventDefault();
+   copyFeature ( 'women-num' );
+})
+
+
+/*copy button functionality(card-6)*/
+//id = cor-copy....corruption copy vutton id
+document.getElementById('cor-copy').addEventListener('click', function (e) {
+    e.preventDefault();
+   copyFeature ( 'cor-num' );
+})
+
+/*copy button functionality(card-7)*/
+//id = elec-copy....electricity copy vutton id
+document.getElementById('elec-copy').addEventListener('click', function (e) {
+    e.preventDefault();
+   copyFeature ( 'elec-num' );
+})
