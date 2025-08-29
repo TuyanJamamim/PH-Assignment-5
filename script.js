@@ -1,3 +1,6 @@
+// card-heart // card vutton class
+//  header-heart // header heart id
+
 
 
 /*heart count increase functionality*/
@@ -43,7 +46,8 @@ function callFeature(content, numver) {
 
     else {
         alert('You do not have enough balance');
-
+        return;
+        
 
     }
     const data = {
@@ -80,6 +84,7 @@ function callFeature(content, numver) {
        `
     historyFCrad.appendChild(div)
 }
+
 
 
 /*Card-1 call button functionality*/
@@ -181,13 +186,6 @@ document.getElementById('elec-call').addEventListener('click', function (e) {
 
 
 
-
-
-
-
-
-
-
 /*clear history functionality*/
 
 // id = clear-history...id of clear vutton
@@ -199,27 +197,6 @@ document.getElementById('clear-history').addEventListener('click', function (e) 
     const historyFCard = document.getElementById('history-container');
     historyFCard.innerText = "";
 
-})
-
-
-
-/*copy button functionality(card-1)*/
-
-// id="copy-vtn"....copy vutton id
-// id="copy-count"....copy count vutton id
-// "emergency-num" ....emergency number(999)
-
-document.getElementById('copy-vtn').addEventListener('click', function (e) {
-    e.preventDefault();
-    alert( num + " " + 'Number copied');
-    let a = document.getElementById('copy-count');
-    let b = a.innerText;
-    let c = parseInt(a.innerText);
-    let d = c + 1;
-    a.innerText = d;
-
-    const num = document.getElementById('emergency-num').innerText;
-    navigator.clipboard.writeText(num);
 })
 
 
