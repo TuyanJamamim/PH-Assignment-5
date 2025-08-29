@@ -82,6 +82,107 @@ function callFeature(content, numver) {
 }
 
 
+/*Card-1 call button functionality*/
+
+//police-call....police call vutton id
+//"police-text".....police text id
+//"police-num".....police number id
+
+document.getElementById('emergency-call').addEventListener('click', function (e) {
+
+    e.preventDefault();
+    callFeature ( 'emergency-text' , 'emergency-num' );
+
+
+})
+
+
+
+
+/*card 2 call vutton functionality*/
+
+//police-call....police call vutton id
+//"police-text".....police text id
+//"police-num".....police number id
+
+document.getElementById('police-call').addEventListener('click', function (e) {
+
+    e.preventDefault();
+    callFeature ( 'police-text' , 'police-num' );
+
+
+})
+
+
+
+/*Card 3 functionality */
+
+//"fire-call"..cal vtn id
+//fire-text...fire text id
+//fire -num...fire num id
+
+document.getElementById('fire-call').addEventListener('click', function (e) {
+
+    e.preventDefault();
+
+    callFeature('fire-text', 'fire-num');
+
+
+})
+
+/*Card 4 call vutton functionality*/
+//"ambulance-call"...ambulance call vtn id
+//ambulance-text...ambulance text id    
+//ambulance-num...ambulance num id
+document.getElementById('ambulance-call').addEventListener('click', function (e) {
+
+    e.preventDefault();
+
+    callFeature('ambulance-text', 'ambulance-num');
+
+
+})
+
+
+/*card 5 call vutton functionality*/
+//"women-call"...disaster call vtn id    
+document.getElementById('women-call').addEventListener('click', function (e) {
+
+    e.preventDefault();
+
+    callFeature('women-text', 'women-num');
+
+
+})
+
+
+/*card 6 call vutton functionality*/
+//"cor-call"...corruption call vtn id
+document.getElementById('cor-call').addEventListener('click', function (e) {
+
+    e.preventDefault();
+
+    callFeature('cor-text', 'cor-num');
+
+
+})
+
+
+/*card 7 call vutton functionality*/
+//"elec-call"...electricity call vtn id
+document.getElementById('elec-call').addEventListener('click', function (e) {
+
+    e.preventDefault();
+
+    callFeature('elec-text', 'elec-num');
+
+
+})
+
+
+
+
+
 
 
 
@@ -110,7 +211,7 @@ document.getElementById('clear-history').addEventListener('click', function (e) 
 
 document.getElementById('copy-vtn').addEventListener('click', function (e) {
     e.preventDefault();
-    alert('999 Number copied');
+    alert( num + " " + 'Number copied');
     let a = document.getElementById('copy-count');
     let b = a.innerText;
     let c = parseInt(a.innerText);
@@ -120,4 +221,7 @@ document.getElementById('copy-vtn').addEventListener('click', function (e) {
     const num = document.getElementById('emergency-num').innerText;
     navigator.clipboard.writeText(num);
 })
+
+/*copy vuttton reusavle function */
+
 
